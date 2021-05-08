@@ -2,3 +2,10 @@
 <p>投稿者<%= @picture.user.name %></p>
 <p>タイトル: <%= @picture.title %></p>
 <p>内容: <%= @picture.content %></p>
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @picture.image.url %>
+</p>
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
